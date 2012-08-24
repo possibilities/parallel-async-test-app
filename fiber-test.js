@@ -38,7 +38,7 @@ if (Meteor.is_server) {
           // Do whatever you need with the results here!
           
           // Inform the future that we're done with it
-          onComplete();
+          onComplete(error, result);
         });
 
         // Return the future
