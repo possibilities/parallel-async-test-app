@@ -26,7 +26,7 @@ if (Meteor.is_server) {
       // Keep track of each job in an array
       var futures = _.map(urls, function(url) {
 
-        // Setup a furture for the current job
+        // Setup a future for the current job
         var future = new Future();
 
         // A callback so the job signal completion
@@ -36,7 +36,8 @@ if (Meteor.is_server) {
         Meteor.http.get(url, function(error, result) {
 
           // Do whatever you need with the results here!
-          
+          // ...
+
           // Inform the future that we're done with it
           onComplete(error, result);
         });
